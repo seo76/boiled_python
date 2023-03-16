@@ -78,7 +78,31 @@ print(m+1)
 
 """
 
+"""
+l=[0]
+temp, m, a, b=0, 0, 0, 1
 
+n = int(input())
+
+for i in range(n):
+    i+=1    
+    temp +=i
+    l.append(temp)
+    h=l[b]-l[a]
+    if (h<n):
+        b+=1
+    elif (h>n):
+        a+=1
+    else:
+        m+=1
+        a+=1
+        b+=1
+        
+print(m+1)
+"""
+
+
+"""
 l=[0]
 temp, m, a, b=0, 0, 0, 1
 
@@ -94,7 +118,8 @@ for i in range(n):
         b+=1
         #h=l[b]-l[a]
     elif (h>n):
-        print("작",h,l[a],l[b],b)
+
+        print("작",h,l[a],l[b],a)
         a+=1
         #h=l[b]-l[a]
     else:
@@ -106,5 +131,37 @@ for i in range(n):
 
 print(l)
 print(m+1)
+"""
 
+
+n=int(input())
+temp, a, b, m = 0, 0, 0, 0
+
+while (b<n+1):
+    if (temp == n):
+        m+=1
+        a+=1
+        b+=1
+        temp=temp+b-a
+        print("같:",a,b,temp,"★")
+    elif (temp < n):
+        b+=1
+        temp+=b
+        print("작:",a,b,temp)
+    else:
+        a+=1
+        temp-=a
+        print("큰:",a,b,temp)
+        
+        
+
+    
+print(m)
+
+        
+
+
+
+
+    
      
