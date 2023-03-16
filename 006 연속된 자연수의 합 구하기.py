@@ -133,6 +133,29 @@ print(l)
 print(m+1)
 """
 
+"""
+n=int(input())
+temp, a, b, m = 0, 0, 0, 0
+
+while (b<n+1):
+    if (temp == n):
+        m+=1
+        a+=1
+        b+=1
+        temp=temp+b-a
+        print("temp == n:","a:",a,"b:",b,"temp:",temp)
+    elif (temp < n):
+        b+=1
+        temp+=b
+        print("temp < n:","a:",a,"b:",b,"temp:",temp)
+    else:
+        a+=1
+        temp-=a
+        print("temp > n:","a:",a,"b:",b,"temp:",temp)
+    
+print("입력값:",n,"\n결과:",m)
+"""
+        
 
 n=int(input())
 temp, a, b, m = 0, 0, 0, 0
@@ -143,24 +166,13 @@ while (b<n+1):
         a+=1
         b+=1
         temp=temp+b-a
-        print("같:",a,b,temp,"★")
     elif (temp < n):
         b+=1
         temp+=b
-        print("작:",a,b,temp)
     else:
         a+=1
         temp-=a
-        print("큰:",a,b,temp)
-        
-        
-
-    
 print(m)
-
-        
-
-
 
 
     
