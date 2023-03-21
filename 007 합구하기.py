@@ -124,6 +124,7 @@ for _ in range(n):
 print(c)
 
 """
+"""
 
 import sys
 input = sys.stdin.readline
@@ -147,8 +148,59 @@ for _ in range(n):
 
 print(c)
 
+"""
+"""
+import sys
+input = sys.stdin.readline
+
+n=int(input())
+m=int(input())
+l=list(map(int,input().split()))
+
+l.sort()
+print(l)
+s, h, c= 0, 0, 0
+e=n-1
+while (s<e):
+    
+    h = l[s]+l[e]
+    if (h==m):
+        
+        print("같",s,e,h)
+        s +=1
+        c +=1
+    elif (h<m):
+        
+       print("작",s,e,h)
+       s +=1
+    else :
+        
+        print("큼",s,e,h)
+        e -=1
+print(c)
+"""
 
 
+import sys
+input = sys.stdin.readline
+
+n=int(input())
+m=int(input())
+l=list(map(int,input().split()))
+l.sort()
+s, h, c= 0, 0, 0
+e=n-1
+while (s<e):
+    
+    h = l[s]+l[e]
+    if (h==m):
+        s +=1
+        c +=1
+    elif (h<m):
+       s +=1
+    else :
+        e -=1
+print(c)
 
 
 
