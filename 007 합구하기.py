@@ -166,16 +166,16 @@ while (s<e):
     h = l[s]+l[e]
     if (h==m):
         
-        print("같",s,e,h)
+        print("h==m","s:",s,"e:",e,"h:",h)
         s +=1
         c +=1
     elif (h<m):
         
-       print("작",s,e,h)
+       print("h<m","s:",s,"e:",e,"h:",h)
        s +=1
     else :
         
-        print("큼",s,e,h)
+        print("h>m","s:",s,"e:",e,"h:",h)
         e -=1
 print(c)
 """
