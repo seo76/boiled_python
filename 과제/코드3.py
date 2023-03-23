@@ -47,8 +47,14 @@ for i in range(l):
 f.close()
 print(*Mlist, sep="\n")
 
+x, y = 0, 0
+class room:
+    def __init__(self,x,y):
+        self.x =x
+        self.y =y
+        self.dir={(x+1,y),(x,y+1),(x-1,y),(x,y-1)}
 
-
+while True
 
 
 
