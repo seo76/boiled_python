@@ -39,12 +39,15 @@ print(line2)
 filename = "maze.txt"
 f = open(filename,'r')
 
-e = len(list(enumerate(f)))
+a=f.read()
+
+print(a)
+#e = len(list(enumerate(f)))
 
 
-lines=f.readline()
+#lines=f.readline()
 
-Mlist=[char for char in list]
+#Mlist=[char for char in list]
 """
 for i in range(e):
     i +=1
