@@ -41,7 +41,7 @@ for j in range (len(i)):
 
 print(sum)
 """
-
+"""
 #N개의 숫자가 공백없이 있을 때, 각 숫자의 합을 구하여라2
 
 i = []
@@ -56,7 +56,7 @@ for j in range (len(i)):
 
 print(sum)
 
-
+"""
 
 """
 
@@ -80,5 +80,16 @@ for j in range (len(i)):
 
 print(sum)
 """
+i = []
+sum = 0
 
+n = int(input())
+i = input()
+
+for j in range (n):
+
+    if (i[j].isdecimal()):
+        sum = sum+int(i[j])
+
+print(sum)
 

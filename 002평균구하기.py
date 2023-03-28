@@ -8,7 +8,7 @@
 
 
 """
-
+"""
 
 
 sum = 0
@@ -26,6 +26,7 @@ avg=sum/max(p)*100/n
 
 print(avg)
 """
+"""
 
 s=[]
 s=list(input("@입력고").split("@",1))
@@ -34,3 +35,17 @@ for i in range (3):
     print(s[i])
 
 """
+sum = 0
+
+n=int(input())
+
+
+p=list(map(int, input().split()))
+ 
+for i in range (n):
+    sum=sum+p[i]
+
+
+avg=sum/max(p)*100/n
+
+print(avg)

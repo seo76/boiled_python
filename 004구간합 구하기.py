@@ -92,7 +92,7 @@ for i in range(1,a+1):
     arr.append(list(map(int, input().split())))
     for k in range(1,a+1):
         arr2[i][k]= arr[i-1][k-1]+arr2[i-1][k]+arr2[i][k-1]-arr2[i-1][k-1]
-print(arr2)
+#print(arr2)
 for _ in range(q):
     x1, y1, x2, y2 = map(int, input().split())
     print(arr2[x2][y2]-arr2[x1-1][y2]-arr2[x2][y1-1]+arr2[x1-1][y1-1])

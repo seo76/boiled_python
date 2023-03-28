@@ -37,6 +37,7 @@ for o in range(m):
 주어진 수의 배열의 i번째 수 부터 j번째 수 까지의 구간 합 구하기
 """
 
+"""
 l2=[]
 temp=0
 ans=[]
@@ -60,6 +61,7 @@ for q in range(m):
 print(*ans,sep='\n') #*을 인 앞에 붙여 언패킹, sep을 통해 엔터로 분리
 
 """
+"""
 
 #구간 합 구하기 2
 
@@ -76,12 +78,35 @@ print(arr)
 
 
 """
+import sys
+input = sys.stdin.readline
+
+l2=[]
+temp=0
+ans=[]
+
+n, m=map(int, input().split())
+l=list(map(int,input().split()))
+
+
+l2.append(temp)
+
+for t in range(n):
+    temp += l[t]
+    l2.append(temp)
+
+print()
+
+for q in range(m):
+    i, j=map(int, input().split())
+    ans.append(l2[j]-l2[i-1])
+
+for i in range(m):
+    print(ans[i])
 
 
 
-
-
-
+#print(*ans,sep='\n')
 
 
 
