@@ -95,18 +95,11 @@ for t in range(n):
     temp += l[t]
     l2.append(temp)
 
-print()
-
 for q in range(m):
     i, j=map(int, input().split())
     ans.append(l2[j]-l2[i-1])
 
-for i in range(m):
-    print(ans[i])
-
-
-
-#print(*ans,sep='\n')
+print(*ans,sep='\n')
 
 
 

@@ -149,7 +149,7 @@ for _ in range(n):
 print(c)
 
 """
-"""
+
 import sys
 input = sys.stdin.readline
 
@@ -164,8 +164,7 @@ e=n-1
 while (s<e):
     
     h = l[s]+l[e]
-    if (h==m):
-        
+    if (h==m):       
         print("h==m","s:",s,"e:",e,"h:",h)
         s +=1
         c +=1
@@ -202,6 +201,6 @@ while (s<e):
         e -=1
 print(c)
 
-
+"""
 
 
