@@ -30,10 +30,10 @@ def decrypt(key, in_filename):
 
 key = b'key is KDFS 2020'
 
-startPath = 'C:/Users/cloua/Desktop/KDFS2020/빈/**'
+startPath = 'C:/Users/cloua/Desktop/KDFS2020/빈/**' 
 
 #Encrypts all files recursively starting from startPath
 for filename in glob.iglob(startPath, recursive=True):
     if(os.path.isfile(filename)):
         print('Encrypting> ' + filename)
-        decrypt(key, filename)
+        decrypt(key, filename)#복호화
