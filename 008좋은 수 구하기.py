@@ -82,7 +82,7 @@ for _ in range(n):
 print(cnt)
         
 """
-"""
+
 
 
 import sys
@@ -90,27 +90,29 @@ input = sys.stdin.readline
 
 n=int(input())
 l =list(map(int,input().split()))
-l.append(0)
+#l.append()
 l.sort()
 temp, cnt= 0,0
+n=n-1
 k = n+1
 
 for _ in range(n):
     k -=1
-    b = n-1
-    a = 1
-    while k>2:
+    b = n
+    a = 0
+    while a<b:
         temp=l[a]+l[b]
         if (temp==l[k]):
             cnt+=1
-            print("d",a,b,k)
+            print("=",a,b,k, l[a], l[b], l[k])
             break
         elif (temp<l[k]):
-            a +=1
-            print(",",a,b,k)
+            print("ㅈ",a,b,k, l[a], l[b], l[k])
+            a +=1           
         else:
+            print("ㅋ",a,b,k, l[a], l[b], l[k])
             b -=1
-            print(a,b,k)
+            
 
 print("c:", cnt)
         
@@ -121,26 +123,26 @@ input = sys.stdin.readline
 
 n=int(input())
 l =list(map(int,input().split()))
-l.append(0)
 l.sort()
 temp, cnt= 0,0
+n=n-1
 k = n+1
 
 for _ in range(n):
     k -=1
     b = n
-    a = 1
+    a = 0
     while a<b:
         temp=l[a]+l[b]
         if (temp==l[k]):
             cnt+=1
             break
         elif (temp<l[k]):
-            a +=1
-            temp=l[a]+l[b]
+            a +=1           
         else:
             b -=1
-            temp=l[a]+l[b]
-
+            
 
 print(cnt)
+
+"""
