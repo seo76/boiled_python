@@ -146,3 +146,5 @@ for _ in range(n):
 print(cnt)
 
 """
+
+#아직도 모르겠다 왜 틀렸을
