@@ -12,10 +12,10 @@ def PdfEnc():
         
         no_extracting = pikepdf.Permissions(extract=False)
 
-        #e = os.path.splitext(nameEncrypt)[0]
+        e = os.path.splitext(e)[0]
         e+= '_enc.pdf'
 
-        rPdf.save(nameEncrypt, encryption=pikepdf.Encryption(
+        rPdf.save(e, encryption=pikepdf.Encryption(
             user = pwEncrypt, owner = pwEncrypt, allow = no_extracting))
 
 #PdfEnc()
