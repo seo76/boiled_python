@@ -10,10 +10,10 @@ def PdfEnc():
         e+='.pdf'
         rPdf = pikepdf.Pdf.open(e)
         
-        no_extracting = pikepdf.Permissions(extract=False)
+        no_extracting = pikepdf.Permissions(extract=False) #추출 못하게 막음
 
-        e = os.path.splitext(e)[0]
-        e+= '_enc.pdf'
+        e = os.path.splitext(e)[0] #확장자 빼고 분리
+        e+= '_enc.pdf' #암호화파일 생성
 
         rPdf.save(e, encryption=pikepdf.Encryption(
             user = pwEncrypt, owner = pwEncrypt, allow = no_extracting))
@@ -27,9 +27,11 @@ def PdfMerge():
     
     for m in nameMerge:
         m+='.pdf'
-        merger.append(m)
+        merger.append(m)#파일 병합
 
-    merger.write('merged.pdf')
+    m1 = nameMerge[0]
+    m2 = nameMerge[-1]
+    merger.write(m1+'~'+m2+'_merged.pdf') #병합파일 생성
     merger.close()
     
 #PdfMerge()
