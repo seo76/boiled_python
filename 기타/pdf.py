@@ -3,19 +3,20 @@ import pikepdf
 import os
 
 def PdfEnc():
-    nameEncrypt=str(input("(pdf암호화)파일 이름 입력\n"))
-    nameEncrypt+='.pdf'
+    nameEncrypt=list(input("(pdf암호화)파일 이름 입력\n").split())
     pwEncrypt = input("비밀번호설정")
 
-    rPdf = pikepdf.Pdf.open(nameEncrypt)
+    for e in nameEncrypt:
+        e+='.pdf'
+        rPdf = pikepdf.Pdf.open(e)
+        
+        no_extracting = pikepdf.Permissions(extract=False)
 
-    no_extracting = pikepdf.Permissions(extract=False)
+        #e = os.path.splitext(nameEncrypt)[0]
+        e+= '_enc.pdf'
 
-    nameEncrypt = os.path.splitext(nameEncrypt)[0]
-    nameEncrypt += '_enc.pdf'
-
-    rPdf.save(nameEncrypt, encryption=pikepdf.Encryption(
-        user = pwEncrypt, owner = pwEncrypt+'123', allow = no_extracting))
+        rPdf.save(nameEncrypt, encryption=pikepdf.Encryption(
+            user = pwEncrypt, owner = pwEncrypt, allow = no_extracting))
 
 #PdfEnc()
 
