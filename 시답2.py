@@ -6,3 +6,5 @@ for i in range(len(n)):
 
 
 print(a)
+
+print(a*'a')
