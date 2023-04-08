@@ -73,11 +73,12 @@ D=input()
 a,c,g,t=map(int, input().split())
 
 Dlist=[0,0,0,0]
+"""
 Dlist[0]=a
 Dlist[1]=c
 Dlist[2]=g
 Dlist[3]=t
-
+"""
 cnt=0
 #st=0
 #ed=p
@@ -97,27 +98,28 @@ def pbox(inp, sz):
 
 for i in D:
     i=i.strip()
-    pbox(i,p)
-    if (sw=='A'):
-        Dlist[0]+=1
-    elif (sw=='C'):
-        Dlist[1]+=1
-    elif (sw=='G'):
-        Dlist[2]+=1
-    else:
-        Dlist[3]+=1
+    if i:
+        pbox(i,p)
+        if (ew=='A'):
+            Dlist[0]+=1
+        elif (ew=='C'):
+            Dlist[1]+=1
+        elif (ew=='G'):
+            Dlist[2]+=1
+        elif (ew=='T'):
+            Dlist[3]+=1
 
-    if (ew=='A'):
-        Dlist[0]-=1
-    elif (ew=='C'):
-        Dlist[1]-=1
-    elif (ew=='G'):
-        Dlist[2]-=1
-    else:
-        Dlist[3]-=1
+        if (sw=='A'):
+            Dlist[0]-=1
+        elif (sw=='C'):
+            Dlist[1]-=1
+        elif (sw=='G'):
+            Dlist[2]-=1
+        elif (sw=='T'):
+            Dlist[3]-=1
 
-    if (a<=Dlist[0] and c<=Dlist[1] and g<=Dlist[2] and t<=Dlist[3]):
-        cnt+=1
+        if ((len(dq)==p)and(a<=Dlist[0] and c<=Dlist[1] and g<=Dlist[2] and t<=Dlist[3])):
+            cnt+=1
 
 print(cnt)
 
