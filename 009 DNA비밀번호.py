@@ -73,20 +73,11 @@ D=input()
 a,c,g,t=map(int, input().split())
 
 Dlist=[0,0,0,0]
-"""
-Dlist[0]=a
-Dlist[1]=c
-Dlist[2]=g
-Dlist[3]=t
-"""
 cnt=0
-#st=0
-#ed=p
-
-
 sw=''
 ew=''
 dq = deque()
+
 def pbox(inp, sz):
     global sw, ew
     dq.append(inp)
