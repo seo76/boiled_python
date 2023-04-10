@@ -36,4 +36,4 @@ startPath = 'C:/Users/cloua/Desktop/KDFS2020/빈/**'
 for filename in glob.iglob(startPath, recursive=True):
     if(os.path.isfile(filename)):
         print('Encrypting> ' + filename)
-        decrypt(key, filename)#복호화
+        decrypt(key, filename)
