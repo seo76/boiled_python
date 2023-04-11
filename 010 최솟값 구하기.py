@@ -9,7 +9,7 @@ n, L = map(int, input().split())
 I = input().split()
 
 a = deque()
-dq = deque()
+dq = int(0)*n
 
 
 def dqbx(inp):
@@ -19,13 +19,14 @@ def dqbx(inp):
 
 j=0
 for i in I:
-    j +=1
     dqbx(i)
-    if a[j]>a[j-1]:
-        dq[j]=a[j-1]
-    elif a[j]<a[j-1]:
-        dq[j]=a[j]
-
+    dq[j]=a[j]
+    if j>0:
+        if a[j]>a[j-1]:
+            dq[j]=a[j-1]
+        elif a[j]<a[j-1]:
+            dq[j]=a[j]
+    j +=1
 
 print(dq)
 
