@@ -22,4 +22,7 @@ def go(x,y):
     random.shuffle(ran)
     return ran[1]
 
+
+
+##dsjlasfj
 print(go(1,2))
