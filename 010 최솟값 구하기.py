@@ -1,4 +1,5 @@
 #https://www.acmicpc.net/problem/12891
+#bb
 
 import sys
 from collections import deque
