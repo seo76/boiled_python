@@ -1,4 +1,4 @@
-#https://www.acmicpc.net/problem/12891
+#https://www.acmicpc.net/problem/11003
 #bb
 
 import sys
@@ -10,23 +10,28 @@ n, L = map(int, input().split())
 I = input().split()
 
 a = deque()
-dq = int(0)*n
+dq = []
 
 
 def dqbx(inp):
     a.append(inp)
     if len(a)>L:
-        a.popleft()
+        a.popleft() #a안은 L개씩 요소의 개수 유지
+    return inp
 
 j=0
 for i in I:
     dqbx(i)
-    dq[j]=a[j]
+    print(a)
+    dq.append(i)
     if j>0:
-        if a[j]>a[j-1]:
-            dq[j]=a[j-1]
-        elif a[j]<a[j-1]:
-            dq[j]=a[j]
+        if a[-1]>a[-2]: #a에 추가된 게 이전 것 보다 클 경우
+            dq[j]=a[-2] #D에는 이전 것으로 숫자 채우기
+        elif a[-1]<a[-2]: #추가 된 게 더 작을 경우
+            dq[j]=a[-1] #추가 된 것으로 숫자 채우기
+    print(j)
+    print(dq)
+
     j +=1
 
 print(dq)
