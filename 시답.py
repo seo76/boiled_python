@@ -1,4 +1,5 @@
 import random
+from collections import deque
 """
 def go(x,y):
     a, x, y =0, 0, 0
@@ -9,7 +10,7 @@ def go(x,y):
 print(dire[1])
 print(go(1,2))
 """
-
+"""
 x=0
 y=0
 
@@ -25,5 +26,15 @@ def go(x,y):
 
 
 print(go(1,2))
+"""
 
-#djswpgksizheld
+a=deque()
+
+a.append(1)
+a.append(2)
+a.append(3)
+
+for aa in a:
+    print(aa)
+
+print(aa[1])
