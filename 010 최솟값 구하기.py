@@ -54,9 +54,8 @@ D = []
 
 def dqbx(inp):
     global m
-    if inp<1:
-        inp=1
-    a.append(inp)
+    if inp>0:
+        a.append(inp)
     if len(a)>L:
         a.popleft()
     m=a[0]
