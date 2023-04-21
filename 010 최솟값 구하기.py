@@ -1,5 +1,5 @@
 #https://www.acmicpc.net/problem/11003
-#bb
+
 """
 
 import sys
